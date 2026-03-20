@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Vansh Rana, a Computer Science undergraduate focused on data analytics, software development, machine learning, and practical project work."
+  />
+  <meta name="theme-color" content="#07111f" />
+  <title>Vansh Rana | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="page-shell">
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo" aria-label="Go to top">VR369</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills &amp; Technologies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications &amp; Courses</a></li>
+        <li><a href="#competitive">Hackathons</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="cv.pdf" download="Vansh-Rana-Resume.pdf">Resume PDF</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-grid container">
+          <div class="hero-copy">
+            <p class="eyebrow">Introduction &amp; Summary</p>
+            <h1>Vansh Rana</h1>
+            <p class="hero-title">Aspiring Data Analyst &amp; Software Developer</p>
+            <p class="hero-lead">
+              Turning raw data into meaningful insights through clean, functional software and hands-on ML workflows.
+            </p>
+            <p class="hero-note">
+              Strong foundation in analytics, reporting, dashboard building, and software development — available for internships and entry-level opportunities.
+            </p>
+
+            <div class="hero-role-wrap hero-badges">
+              <span class="hero-badge">Python</span>
+              <span class="hero-badge">SQL</span>
+              <span class="hero-badge">Power BI</span>
+              <span class="hero-badge">JavaScript</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View projects</a>
+              <a href="cv.pdf" class="btn btn-secondary" download="Vansh-Rana-Resume.pdf">Download resume PDF</a>
+              <a href="#contact" class="btn btn-ghost">Contact</a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/vanshrana369/" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/vanshrana369/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:Vanshranaglobal@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <article class="metric-card">
+                <span class="metric-value">3</span>
+                <span class="metric-label">Featured projects</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">4</span>
+                <span class="metric-label">Certifications</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">3rd</span>
+                <span class="metric-label">Hackathon finish</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="hero-card hero-card-main glass-card">
+              <div class="photo-frame-wrap" id="photoFrameWrap" title="Click to upload your photo">
+                <div class="photo-frame-ring"></div>
+                <div class="photo-frame-inner">
+                  <img id="profilePhoto" src="profile.jpg" alt="Vansh Rana" style="display:block;" />
+                  <div class="photo-placeholder" id="photoPlaceholder" style="display:none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <span>Upload Photo</span>
+                  </div>
+                </div>
+                <input type="file" id="photoInput" accept="image/*" style="display:none;" />
+              </div>
+              <p class="hero-card-kicker">Introduction &amp; Summary</p>
+              <h2>Focused on solving problems with data, logic, and clean execution.</h2>
+              <p>
+                Computer Science undergraduate with hands-on experience in analytics, software development, and structured problem solving.
+              </p>
+              <div class="signal-list">
+                <span><i class="fas fa-chart-line"></i> Power BI dashboards and analytics projects</span>
+                <span><i class="fas fa-brain"></i> Machine learning and data workflows</span>
+                <span><i class="fas fa-laptop-code"></i> Clean, functional software development</span>
+              </div>
+              <a href="#projects" class="summary-link">View selected projects <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hero-card hero-card-mini glass-card">
+              <p class="mini-label">Quick Details</p>
+              <ul>
+                <li>B.Tech CSE, Lovely Professional University</li>
+                <li>Based in Phagwara, Punjab</li>
+                <li>Open to internships and entry-level roles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+          <span>Scroll</span>
+          <i class="fas fa-arrow-down"></i>
+        </a>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">About Me</p>
+            <h2>About Me</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy glass-card">
+              <p>
+                <strong>B.Tech Computer Science</strong> student at Lovely Professional University with a strong
+                interest in <strong>Data Analytics</strong> and <strong>Software Development</strong>.
+              </p>
+              <p>
+                Hands-on work includes Power BI dashboards, data cleaning, exploratory analysis, machine learning
+                workflows, and ongoing DSA practice.
+              </p>
+              <p>
+                A fast learner who values clear communication, takes ownership of work, and consistently delivers on commitments.
+              </p>
+            </div>
+
+            <div class="about-aside">
+              <div class="glass-card detail-stack">
+                <div class="detail-item">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Phagwara, Punjab, India</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">University</span>
+                  <span class="detail-value">Lovely Professional University</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Degree</span>
+                  <span class="detail-value">B.Tech CSE, 2023 to Present</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Current CGPA</span>
+                  <span class="detail-value">6.83</span>
+                </div>
+              </div>
+
+              <div class="value-grid">
+                <article class="value-card glass-card">
+                  <i class="fas fa-lightbulb"></i>
+                  <h3>Analytical</h3>
+                  <p>Turns raw information into useful insight.</p>
+                </article>
+                <article class="value-card glass-card">
+                  <i class="fas fa-code"></i>
+                  <h3>Practical</h3>
+                  <p>Builds solutions that are clear, useful, and well structured.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-dark">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Skills &amp; Technologies</p>
+            <h2>Skills &amp; Technologies</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-category glass-card">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-orange">HTML</span>
+                <span class="tag tag-yellow">JavaScript</span>
+                <span class="tag tag-teal">C++</span>
+                <span class="tag tag-red">Java</span>
+                <span class="tag tag-purple">SQL</span>
+              </div>
+            </article>
+
+            <article class="skill-category glass-card">
+              <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+              <h3>Data Analysis and Machine Learning</h3>
+              <div class="skill-tags">
+                <span class="tag tag-blue">Pandas</span>
+                <span class="tag tag-teal">NumPy</span>
+                <span class="tag tag-orange">Matplotlib</span>
+                <span class="tag tag-purple">Seaborn</span>
+                <span class="tag tag-green">Scikit-Learn</span>
+                <span class="tag tag-yellow">Power BI</span>
+              </div>
+            </article>
+
+            <article class="skill-category glass-card">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <h3>Computer Science Foundations</h3>
+              <div class="skill-tags">
+                <span class="tag tag-purple">DSA</span>
+                <span class="tag tag-teal">OOP</span>
+                <span class="tag tag-blue">DBMS</span>
+                <span class="tag tag-orange">OS</span>
+              </div>
+            </article>
+
+            <article class="skill-category glass-card">
+              <div class="skill-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+              <h3>Developer Tools</h3>
+              <div class="skill-tags">
+                <span class="tag tag-dark">Git</span>
+                <span class="tag tag-dark">GitHub</span>
+                <span class="tag tag-blue">VS Code</span>
+                <span class="tag tag-green">Jupyter</span>
+                <span class="tag tag-orange">Excel</span>
+              </div>
+            </article>
+
+            <article class="skill-category glass-card">
+              <div class="skill-icon"><i class="fas fa-people-group"></i></div>
+              <h3>Soft Skills</h3>
+              <div class="skill-tags">
+                <span class="tag tag-teal">Communication</span>
+                <span class="tag tag-green">Team Leadership</span>
+                <span class="tag tag-blue">Problem Solving</span>
+                <span class="tag tag-purple">Time Management</span>
+                <span class="tag tag-yellow">Adaptability</span>
+                <span class="tag tag-orange">Ownership</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Projects</p>
+            <h2>Projects and applied work.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card glass-card">
+              <div class="project-topline">
+                <span class="project-date">Oct 2025</span>
+                <span class="project-kind">Analytics Project</span>
+              </div>
+              <div class="project-visual">
+                <img src="real.png" alt="Real Estate Analytics Dashboard" class="project-img" />
+              </div>
+              <h3>Real Estate Analytics Dashboard</h3>
+              <p>Interactive Power BI dashboard built to analyze pricing, market trends, and location-level performance.</p>
+              <ul class="project-points">
+                <li>Used DAX and Power Query for transformations and reporting logic.</li>
+                <li>Built KPI panels for market value, average price, and total listings.</li>
+                <li>Created recruiter-friendly business insight visuals.</li>
+              </ul>
+            </article>
+
+            <article class="project-card glass-card">
+              <div class="project-topline">
+                <span class="project-date">May 2025</span>
+                <span class="project-kind">Machine Learning Project</span>
+              </div>
+              <div class="project-visual">
+                <img src="parking.jpg" alt="Parking Fee Prediction Using Machine Learning" class="project-img" />
+              </div>
+              <h3>Parking Fee Prediction Using Machine Learning</h3>
+              <p>Machine learning workflow covering cleaning, EDA, feature engineering, and model evaluation.</p>
+              <ul class="project-points">
+                <li>Handled missing values and improved training readiness.</li>
+                <li>Compared multiple Scikit-Learn models.</li>
+                <li>Used visual analysis to support decisions.</li>
+              </ul>
+            </article>
+
+            <article class="project-card glass-card">
+              <div class="project-topline">
+                <span class="project-date">Current Focus</span>
+                <span class="project-kind">Frontend Project</span>
+              </div>
+              <div class="project-visual">
+                <img src="porfolio.png" alt="Personal Portfolio Website" class="project-img" />
+              </div>
+              <h3>Personal Portfolio Website</h3>
+              <p>Responsive website built to present profile, projects, and career direction in a recruiter-friendly format.</p>
+              <ul class="project-points">
+                <li>Used HTML, CSS, and JavaScript for a polished static experience.</li>
+                <li>Structured the content for quick recruiter and hiring-manager scanning.</li>
+                <li>Added a downloadable resume PDF workflow.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-dark">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Summer Training</p>
+            <h2>Summer Training</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item glass-card">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <div class="timeline-head">
+                  <h3>Summer Training - DSA in C++</h3>
+                  <span>Jun 2025</span>
+                </div>
+                <p>Worked on arrays, linked lists, stacks, queues, trees, graphs, heaps, searching, sorting, and dynamic programming.</p>
+                <div class="timeline-tags">
+                  <span class="tag tag-teal">C++</span>
+                  <span class="tag tag-blue">DSA</span>
+                  <span class="tag tag-purple">Algorithms</span>
+                </div>
+                <a href="https://media.licdn.com/dms/image/v2/D5622AQGyFkToABwaQw/feedshare-shrink_800/B56ZjM4ix_HkAg-/0/1755784035069?e=1775692800&v=beta&t=IIDFudzW3ZBnhNflAanvIVy2qLiDTLPA8b1Kbsax64U" target="_blank" class="cert-btn">View Certificate</a>
+              </div>
+            </article>
+
+            <article class="timeline-item glass-card">
+              <div class="timeline-marker"></div>
+              <div class="timeline-body">
+                <div class="timeline-head">
+                  <h3>Summer Training Team Leadership</h3>
+                  <span>Jul 2025</span>
+                </div>
+                <p>Led a project team, managed task distribution, coordinated progress, and supported timely delivery.</p>
+                <div class="timeline-tags">
+                  <span class="tag tag-yellow">Ownership</span>
+                  <span class="tag tag-green">Communication</span>
+                  <span class="tag tag-blue">Teamwork</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-callout glass-card">
+            <p class="callout-title">Current Work Status</p>
+            <p>Actively seeking internships, fresher roles, and entry-level work in analytics and software development.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Certifications &amp; Courses</p>
+            <h2>Certifications &amp; Courses</h2>
+          </div>
+
+          <div class="certs-grid">
+            <article class="cert-card glass-card">
+              <i class="fas fa-shield-halved"></i>
+              <div>
+                <h3>Privacy and Security in Social Media</h3>
+                <p>NPTEL</p>
+                <span>May 2025</span>
+              </div>
+              <a href="https://media.licdn.com/dms/image/v2/D5622AQFYXMy13ax4XA/feedshare-shrink_800/B56ZdTW83hGQAg-/0/1749450216297?e=1775692800&v=beta&t=ErKuxPm4cVrsKx4Mbf4K4hlfCajLjOPfFJ0NqhJyhHQ" target="_blank" class="cert-btn">View Certificate</a>
+            </article>
+
+            <article class="cert-card glass-card">
+              <i class="fab fa-free-code-camp"></i>
+              <div>
+                <h3>Responsive Web Design</h3>
+                <p>freeCodeCamp</p>
+                <span>Oct 2023</span>
+              </div>
+              <a href="https://www.freecodecamp.org/certification/VanshRana66/responsive-web-design" target="_blank" class="cert-btn">View Certificate</a>
+            </article>
+
+            <article class="cert-card glass-card">
+              <i class="fas fa-database"></i>
+              <div>
+                <h3>Introduction to Data Analytics</h3>
+                <p>IBM</p>
+                <span>Nov 2025</span>
+              </div>
+              <a href="https://www.coursera.org/account/accomplishments/verify/GZ4IT1MLLFX1?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" class="cert-btn">View Certificate</a>
+            </article>
+
+            <article class="cert-card glass-card">
+              <i class="fas fa-network-wired"></i>
+              <div>
+                <h3>Bits and Bytes of Computer Networking</h3>
+                <p>Google / Coursera</p>
+                <span>Sep 2024</span>
+              </div>
+              <a href="https://www.coursera.org/account/accomplishments/verify/NMA3DV7FS1YF?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" class="cert-btn">View Certificate</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="competitive" class="section section-dark">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Competitive Programming &amp; Hackathons</p>
+            <h2>Problem solving under pressure and fast-paced team execution.</h2>
+          </div>
+
+          <div class="achievement-grid">
+            <article class="achievement-card glass-card">
+              <i class="fas fa-trophy"></i>
+              <div>
+                <h3>Hackathon - 3rd Place</h3>
+                <p>Placed 3rd among 30 competing groups by solving problems under time pressure.</p>
+                <span>Mar 2024</span>
+              </div>
+            </article>
+
+            <article class="achievement-card glass-card">
+              <i class="fas fa-laptop-code"></i>
+              <div>
+                <h3>DSA Problem Solving Practice</h3>
+                <p>Regular practice in arrays, trees, graphs, recursion, searching, sorting, and dynamic programming.</p>
+                <span>Ongoing</span>
+              </div>
+            </article>
+
+            <article class="achievement-card glass-card">
+              <i class="fas fa-people-group"></i>
+              <div>
+                <h3>Team Collaboration Under Deadlines</h3>
+                <p>Hackathon and training work improved communication, delegation, and decision making in fast-moving environments.</p>
+                <span>Ongoing</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="open-source" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Open Source Contributions</p>
+            <h2>Current contribution status and next contribution goals.</h2>
+          </div>
+
+          <div class="status-grid">
+            <article class="status-card glass-card">
+              <h3>Current Status</h3>
+              <p>Currently preparing first public open source contributions and improving project quality and documentation before submitting community work.</p>
+            </article>
+            <article class="status-card glass-card">
+              <h3>Contribution Focus</h3>
+              <p>Areas of interest include beginner-friendly frontend issues, documentation improvements, dashboard work, and practical JavaScript or Python fixes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section section-dark">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Education</p>
+            <h2>Academic background.</h2>
+          </div>
+
+          <div class="education-grid">
+            <article class="education-card glass-card">
+              <span class="education-year">2023 - Present</span>
+              <h3>Bachelor of Technology in Computer Science</h3>
+              <p>Lovely Professional University</p>
+              <div class="score-row">
+                <span>CGPA</span>
+                <strong>6.83</strong>
+              </div>
+              <div class="score-bar"><span style="width: 68.3%"></span></div>
+            </article>
+
+            <article class="education-card glass-card">
+              <span class="education-year">2022 - 2023</span>
+              <h3>Intermediate, Class XII</h3>
+              <p>DR KN Modi Global School</p>
+              <div class="score-row">
+                <span>Percentage</span>
+                <strong>65%</strong>
+              </div>
+              <div class="score-bar"><span style="width: 65%"></span></div>
+            </article>
+
+            <article class="education-card glass-card">
+              <span class="education-year">2020 - 2021</span>
+              <h3>Matriculation, Class X</h3>
+              <p>DR KN Modi Global School</p>
+              <div class="score-row">
+                <span>Percentage</span>
+                <strong>81%</strong>
+              </div>
+              <div class="score-bar"><span style="width: 81%"></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume-download" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Downloadable Resume (PDF Format)</p>
+            <h2>Download the resume directly or open the printable web version.</h2>
+          </div>
+
+          <div class="resume-download-grid">
+            <div class="resume-download-card glass-card">
+              <p class="callout-title">Resume Access</p>
+              <p>The portfolio includes a direct PDF download for quick sharing with recruiters and a web-based resume page for printing.</p>
+              <div class="hero-actions">
+                <a href="cv.pdf" class="btn btn-primary" download="Vansh-Rana-Resume.pdf">
+                  <i class="fas fa-file-pdf"></i>
+                  Download PDF
+                </a>
+                <a href="resume.html" class="btn btn-secondary">Open resume page</a>
+              </div>
+            </div>
+
+            <div class="resume-download-card glass-card">
+              <p class="callout-title">Best For</p>
+              <ul class="resume-points">
+                <li>Attaching a clean resume to job applications</li>
+                <li>Sharing a direct file with recruiters</li>
+                <li>Keeping a print-friendly version aligned with the portfolio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-dark">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Contact Section</p>
+            <h2>Let us connect.</h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-panel glass-card">
+              <p class="contact-intro">
+                Open to internships, fresher roles, and opportunities in data analytics, software development, and related technical fields.
+              </p>
+
+              <a href="mailto:Vanshranaglobal@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                <span>Vanshranaglobal@gmail.com</span>
+              </a>
+              <a href="tel:+919105770369" class="contact-link">
+                <i class="fas fa-phone"></i>
+                <span>+91 91057 70369</span>
+              </a>
+              <a href="https://www.linkedin.com/in/vanshrana369/" target="_blank" rel="noopener" class="contact-link">
+                <i class="fab fa-linkedin-in"></i>
+                <span>linkedin.com/in/vanshrana369</span>
+              </a>
+              <a href="https://github.com/vanshrana369/" target="_blank" rel="noopener" class="contact-link">
+                <i class="fab fa-github"></i>
+                <span>github.com/vanshrana369</span>
+              </a>
+            </div>
+
+            <form class="contact-form glass-card" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Role, project, or collaboration" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Share a few details about the role, team, or project."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-paper-plane"></i>
+                Send with email
+              </button>
+              <p class="form-note">This opens your default mail app with the details filled in.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-name">Vansh Rana</p>
+          <p class="footer-copy">Portfolio focused on data analytics, software development, and recruiter-ready presentation.</p>
+        </div>
+        <div class="footer-actions">
+          <a href="cv.pdf" class="footer-resume" download="Vansh-Rana-Resume.pdf">Download Resume PDF</a>
+          <div class="footer-socials">
+            <a href="https://github.com/vanshrana369/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vanshrana369/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:Vanshranaglobal@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>
